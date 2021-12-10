@@ -15,8 +15,8 @@ jobs:
     - name: Copy web files to server with scp
       uses: appleboy/scp-action@master
       with:
-          source: frontend/
-          target: ${{ secrets.NFT_REMOTE_TARGET }}
+          source: /
+          target: ${{ secrets.NFT_REMOTE_TARGET }}/frontend
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.REMOTE_KEY }}
