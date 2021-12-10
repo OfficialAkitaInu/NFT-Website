@@ -46,6 +46,8 @@ body{
     display:block;
     margin:auto;
     border-radius: 50%;
+    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%; 
     width: 400px;
     outline: 2px solid black;
     outline-offset: -2px;
