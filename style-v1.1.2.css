@@ -38,7 +38,7 @@ body{
 }
 
 @media screen and (max-width: 992px) {
-  .purpleBackground {
+  .greenBackground {
       background: url("images/nft_background.jpg") no-repeat center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
