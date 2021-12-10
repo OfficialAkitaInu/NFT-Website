@@ -37,6 +37,12 @@ body{
     background-size: cover;
 }
 
+@media screen and (max-width: 992px) {
+  .purpleBackground {
+      background: url("images/nft_background.webp") no-repeat center center; 
+  }
+}
+
 .container {
   margin: auto;
   max-width: 1200px;
