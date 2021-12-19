@@ -1,0 +1,142 @@
+[
+    {
+    "section":"Head","info":[
+        
+        {"id":"01","name":"None","rarity":"Common"},
+        {"id":"02","name":"Paneled hat","rarity":"Common"},
+        {"id":"03","name":"Sprout","rarity":"Common"},
+        {"id":"04","name":"Antena","rarity":"Common"},
+        {"id":"05","name":"Beanie","rarity":"Common"},
+        {"id":"06","name":"Fez","rarity":"Common"},
+        {"id":"07","name":"Mohawk Green","rarity":"Common"},
+        {"id":"08","name":"Mohawk Purple","rarity":"Common"},
+        {"id":"09","name":"Bandana","rarity":"Uncommon"},
+        {"id":"10","name":"Chef hat","rarity":"Uncommon"},
+        {"id":"11","name":"Bird","rarity":"Uncommon"},
+        {"id":"12","name":"Laurels","rarity":"Rare"},
+        {"id":"13","name":"Ninja headband blue","rarity":"Rare"},
+        {"id":"14","name":"Ninja headband pink","rarity":"Rare"},
+        {"id":"15","name":"Top hat","rarity":"Rare add algo logo"},
+        {"id":"16","name":"Pirate","rarity":"Rare"},
+        {"id":"17","name":"Wizard","rarity":"Rare"},
+        {"id":"18","name":"Halo","rarity":"Rare"},
+        {"id":"19","name":"Horns","rarity":"Rare"},
+        {"id":"20","name":"Cheese slice","rarity":"Epic"},
+        {"id":"21","name":"Flower crown","rarity":"Epic"},
+        {"id":"22","name":"Pompadour","rarity":"Epic"},
+        {"id":"23","name":"Tiny dog","rarity":"Epic"},
+        {"id":"24","name":"Third eye","rarity":"Epic"},
+        {"id":"25","name":"Space helmet","rarity":"Legendary"},
+        {"id":"26","name":"Medieval Helmet","rarity":"Legendary"},
+        {"id":"27","name":"Crown","rarity":"Legendary"}
+    ]
+    },
+    {
+    "section":"Eyes","info":[
+        
+        {"id":"01","name":"Base Eyes","rarity":"Common"},
+        {"id":"02","name":"Rose colored glasses","rarity":"Common"},
+        {"id":"03","name":"Flame glasses","rarity":"Common"},
+        {"id":"04","name":"Pirate patch","rarity":"Common"},
+        {"id":"05","name":"Nerd glasses","rarity":"Common"},
+        {"id":"06","name":"3D glasses","rarity":"Uncommon"},
+        {"id":"07","name":"Pixel shades","rarity":"Uncommon"},
+        {"id":"08","name":"La Forge Visor","rarity":"Rare"},
+        {"id":"09","name":"Monocle","rarity":"Rare"},
+        {"id":"10","name":"Tech visor","rarity":"Epic"},
+        {"id":"11","name":"Engineer goggles","rarity":"Epic"},
+        {"id":"12","name":"Lazer eyes","rarity":"Legendary"}
+    ]
+    },
+    {
+    "section":"Snout","info":[
+        
+        {"id":"01","name":"None","rarity":"Common"},
+        {"id":"02","name":"Stick","rarity":"Common"},
+        {"id":"03","name":"Pipe","rarity":"Common"},
+        {"id":"04","name":"Dog toy","rarity":"Uncommon"},
+        {"id":"05","name":"Tongue out side","rarity":"Uncommon"},
+        {"id":"06","name":"Vampire","rarity":"Uncommon"},
+        {"id":"07","name":"Tongue out straight","rarity":"Rare"},
+        {"id":"08","name":"Clown nose","rarity":"Rare"},
+        {"id":"09","name":"Mustache","rarity":"Rare"},
+        {"id":"10","name":"Snarl","rarity":"Epic"},
+        {"id":"11","name":"Rose","rarity":"Epic"},
+        {"id":"12","name":"Dagger","rarity":"Legendary"}
+    ]
+    },
+    {
+    "section":"Body","info":[
+        
+        {"id":"01","name":"None","rarity":"Common"},
+        {"id":"02","name":"Color block hoodie","rarity":"Common"},
+        {"id":"03","name":"Bomber jacket","rarity":"Common"},
+        {"id":"04","name":"Puffy vest","rarity":"Common"},
+        {"id":"05","name":"Bandana (you know, like dogs wear)","rarity":"Common"},
+        {"id":"06","name":"Hawaiian button up red","rarity":"Common"},
+        {"id":"07","name":"Hawaiian button up blue","rarity":"Common"},
+        {"id":"08","name":"Striped T-shirt blue","rarity":"Common"},
+        {"id":"09","name":"Striped shirt red","rarity":"Common"},
+        {"id":"10","name":"hype shirt","rarity":"Uncommon"},
+        {"id":"11","name":"Nerd shirt and tie","rarity":"Uncommon"},
+        {"id":"12","name":"bow collar","rarity":"Uncommon"},
+        {"id":"13","name":"Tuxedo","rarity":"Rare"},
+        {"id":"14","name":"Punk jacket with spikes","rarity":"Rare"},
+        {"id":"15","name":"Wizard robe","rarity":"Rare"},
+        {"id":"16","name":"90’s windbreaker","rarity":"Rare"},
+        {"id":"17","name":"Straight jacket","rarity":"Epic"},
+        {"id":"18","name":"Royal cape","rarity":"Epic"},
+        {"id":"19","name":"Pirate jacket","rarity":"Epic"},
+        {"id":"20","name":"Yukata blue","rarity":"Epic"},
+        {"id":"21","name":"Yukata pink","rarity":"Epic"},
+        {"id":"22","name":"Super hero cape","rarity":"Legendary"},
+        {"id":"23","name":"Space Suit","rarity":"Legendary"},
+        {"id":"24","name":"Fantasy armor","rarity":"Legendary"}
+    ]
+    },
+    {
+    "section":"Back","info":[
+        
+        {"id":"01","name":"None","rarity":"Super Common"},
+        {"id":"02","name":"Backpack","rarity":"Common"},
+        {"id":"03","name":"Shovel","rarity":"Uncommon"},
+        {"id":"04","name":"Sword","rarity":"Rare"},
+        {"id":"06","name":"Katana","rarity":"Epic"},
+        {"id":"05","name":"Stave","rarity":"Rare"},
+        {"id":"07","name":"Baguette","rarity":"Legendary"}
+    ]
+    },
+    {
+    "section":"Skin","info":[
+        
+        {"id":"01","name":"Red akita fur","rarity":"29%"},
+        {"id":"02","name":"Brownbrindle Akita fur","rarity":"20%"},
+        {"id":"03","name":"Blue Brindle fur","rarity":"20%"},
+        {"id":"04","name":"Polar","rarity":"15%"},
+        {"id":"05","name":"Marble","rarity":"7.5%"},
+        {"id":"06","name":"Acid","rarity":"5%"},
+        {"id":"07","name":"Rainbow","rarity":"2.5%"},
+        {"id":"08","name":"Gold","rarity":"1%"},
+        {"id":"09","name":"Mummy","rarity":""},
+        {"id":"10","name":"Zombie","rarity":""},
+        {"id":"11","name":"Diamond","rarity":""}
+    ]
+    },
+    {
+    "section":"Background","info":[
+        
+        {"id":"01","name":"Purple","rarity":"Common"},
+        {"id":"02","name":"Blue","rarity":"Common"},
+        {"id":"03","name":"Green","rarity":"Common"},
+        {"id":"04","name":"Yellow","rarity":"Common"},
+        {"id":"05","name":"Red","rarity":"Common"},
+        {"id":"06","name":"Orange","rarity":"Common"},
+        {"id":"07","name":"Gray","rarity":"Common"},
+        {"id":"08","name":"Akita classic purple","rarity":""},
+        {"id":"09","name":"Akita classic Green","rarity":""},
+        {"id":"10","name":"Marble","rarity":"Rare"},
+        {"id":"11","name":"Liquid (swoopy globs)","rarity":"Epic"},
+        {"id":"12","name":"Rainbow","rarity":"Legendary"}
+    ]
+    }
+]

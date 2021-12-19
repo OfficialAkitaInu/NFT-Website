@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300;600;900&family=Urbanist:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+* {
+  scrollbar-color: #44f8bd #1f2029;
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  background-color: rgba(0,0,0,0.1);
+  width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+  width: 9px;
+  border-left:solid 0.5px rgba(62,66,72,1);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #44f8bd;
+  border-radius: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+}
+body.dark{
+    background: #101010;
+    color: #fff;
+}
+body.dark-discord{
+    background: rgb(46,49,54);
+    color: #fff;
+}
+.bg-dark-grey{
+    background:rgba(31,34,37,1) !important;
+}
+h1,h2,h3,h4,h5,h6,.navbar-brand,
+.h1,.h2,.h3,.h4,.h5,.h6,.navbar-brand{
+    font-family: 'Georama', sans-serif;
+    font-weight:900 !important;
+}
+.nft-font,h1,h2,h3,h4,h5,h6{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.semi-bold{
+    font-weight:600 !important;
+}
+
+.rounded-4 {
+    border-radius: 1rem!important;
+}
+
+.navbar-toggler {
+    border: 0px;
+}
+
+i {
+    font-style: normal;
+}

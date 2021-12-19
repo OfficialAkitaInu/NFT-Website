@@ -1,0 +1,79 @@
+.card {
+    background: none;
+}
+
+.big-round .card-img, .big-round .card-img-top {
+    border-top-left-radius: calc(1rem - 1px);
+    border-top-right-radius: calc(1rem - 1px);
+}
+.big-round .card-footer:last-child {
+    border-radius: 0 0 calc(1rem - 1px) calc(1rem - 1px);
+}
+.nftBackground {
+    background: url("../../../images/nft_background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.navbar-toggler.nftBackground {
+    background: url("../../../images/nft_background.jpg") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+@media screen and (max-width: 992px) {
+    .nftBackground {
+        background: url("../../../images/nft_background.jpg") no-repeat center center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+.fadeBlackBackground{
+    background: rgba(0,0,0,0.5);
+}
+.epic,
+.legendary,
+.rare,
+.uncommon,
+.common{
+    text-shadow:1px 1px 0 rgba(0,0,0,0.2);
+    border-radius: 50rem!important;
+    display: inline-block;
+    padding: .35em .65em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border: none;
+}
+.legendary{
+    background-color:orange;
+}
+.epic{
+    background-color: #ae4abf;
+}
+.rare{
+    background-color: #16a2be
+}
+.uncommon{
+    background-color: #6bae00;
+}
+.common{
+    background-color: #959595;
+}
+
+.form-select {
+    color: #fff;
+    background-color: rgba(31,34,37,1) !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2344f8bd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    border: 1px solid #44f8bd;
+    border-radius:calc(1rem - 1px);
+}
