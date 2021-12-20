@@ -11,6 +11,7 @@ const HeroSection = () => {
             <div className="row align-items-center py-6 px-3 h-full-screen">
                 <div className="col-12 text-center">
                     <img src={Gif} width="350" alt="" className="img-fluid d-block mx-auto rounded-circle mb-5 border border-dark border-3"/>
+                    <button class="btn btn-outline-light btn-lg rounded-pill shadow border-2">Enter Shuffle</button>
                 </div>
             </div>
         </div>

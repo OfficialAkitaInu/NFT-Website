@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Img1 from '../../../images/nft.gif';
+import Img1 from '../../../images/nft/IMG_0505.jpg';
 import Img2 from '../../../images/nft/IMG_0505.jpg';
-import Img3 from '../../../images/nft/IMG_0515.jpg';
+import Img3 from '../../../images/nft/IMG_0505.jpg';
 
 const AboutSection = () => {
     return (

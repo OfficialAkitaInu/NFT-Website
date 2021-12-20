@@ -1,7 +1,6 @@
 [
     {
     "section":"Head","info":[
-        
         {"id":"01","name":"None","rarity":"Common"},
         {"id":"02","name":"Paneled hat","rarity":"Common"},
         {"id":"03","name":"Sprout","rarity":"Common"},
@@ -33,7 +32,6 @@
     },
     {
     "section":"Eyes","info":[
-        
         {"id":"01","name":"Base Eyes","rarity":"Common"},
         {"id":"02","name":"Rose colored glasses","rarity":"Common"},
         {"id":"03","name":"Flame glasses","rarity":"Common"},
@@ -50,7 +48,6 @@
     },
     {
     "section":"Snout","info":[
-        
         {"id":"01","name":"None","rarity":"Common"},
         {"id":"02","name":"Stick","rarity":"Common"},
         {"id":"03","name":"Pipe","rarity":"Common"},
@@ -67,12 +64,11 @@
     },
     {
     "section":"Body","info":[
-        
         {"id":"01","name":"None","rarity":"Common"},
         {"id":"02","name":"Color block hoodie","rarity":"Common"},
         {"id":"03","name":"Bomber jacket","rarity":"Common"},
         {"id":"04","name":"Puffy vest","rarity":"Common"},
-        {"id":"05","name":"Bandana (you know, like dogs wear)","rarity":"Common"},
+        {"id":"05","name":"Bandana","rarity":"Common"},
         {"id":"06","name":"Hawaiian button up red","rarity":"Common"},
         {"id":"07","name":"Hawaiian button up blue","rarity":"Common"},
         {"id":"08","name":"Striped T-shirt blue","rarity":"Common"},
@@ -96,7 +92,6 @@
     },
     {
     "section":"Back","info":[
-        
         {"id":"01","name":"None","rarity":"Super Common"},
         {"id":"02","name":"Backpack","rarity":"Common"},
         {"id":"03","name":"Shovel","rarity":"Uncommon"},
@@ -108,7 +103,6 @@
     },
     {
     "section":"Skin","info":[
-        
         {"id":"01","name":"Red akita fur","rarity":"29%"},
         {"id":"02","name":"Brownbrindle Akita fur","rarity":"20%"},
         {"id":"03","name":"Blue Brindle fur","rarity":"20%"},
@@ -124,7 +118,6 @@
     },
     {
     "section":"Background","info":[
-        
         {"id":"01","name":"Purple","rarity":"Common"},
         {"id":"02","name":"Blue","rarity":"Common"},
         {"id":"03","name":"Green","rarity":"Common"},
@@ -132,10 +125,10 @@
         {"id":"05","name":"Red","rarity":"Common"},
         {"id":"06","name":"Orange","rarity":"Common"},
         {"id":"07","name":"Gray","rarity":"Common"},
-        {"id":"08","name":"Akita classic purple","rarity":""},
-        {"id":"09","name":"Akita classic Green","rarity":""},
+        {"id":"08","name":"Akita Classic Purple","rarity":""},
+        {"id":"09","name":"Akita Classic Green","rarity":""},
         {"id":"10","name":"Marble","rarity":"Rare"},
-        {"id":"11","name":"Liquid (swoopy globs)","rarity":"Epic"},
+        {"id":"11","name":"Liquid (Swoopy Globs)","rarity":"Epic"},
         {"id":"12","name":"Rainbow","rarity":"Legendary"}
     ]
     }
