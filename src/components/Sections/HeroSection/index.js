@@ -1,17 +1,94 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 
 import Gif from '../../../images/nft.gif';
-
 import './index.scss';
 
-const HeroSection = () => {
+import MyAlgoConnect from '@randlabs/myalgo-connect';
+
+import { connectWallet } from "../../../services/actions/actions";
+import {myAlgoWallet} from '../../../services/reducers/connect/connect'
+
+const HeroSection = ({address, connectWallet, myAlgoWallet}) => {
+    const [entered, setEntered] = useState(false);
+
+    async function getEntered() {
+        const response = await fetch(process.env.REACT_APP_API_URL + "/entered", {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({wallet_address: localStorage.getItem("myAlgoAddress")})
+        });
+        if (response.ok) {
+            setEntered(true)
+            return true;
+        }
+        else {
+            setEntered(false);
+            return false;
+        }
+    }
+
+    useEffect(() => {
+        if (localStorage.getItem("myAlgoAddress")) {
+            getEntered();
+        }
+    }, [])
+
+    async function connectToMyAlgo() {
+        try {
+            myAlgoWallet = myAlgoWallet = new MyAlgoConnect();
+
+            const accounts = await myAlgoWallet.connect();
+            const addresses = accounts.map(account => account.address);
+
+            connectWallet(addresses[0]);
+            localStorage.setItem("myAlgoAddress", addresses[0])
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+    async function enterShuffle() {
+        if (!address) {
+            await connectToMyAlgo();
+        }
+        
+        if (getEntered()) {
+            return true;
+        }
+
+        const response = await fetch(process.env.REACT_APP_API_URL + "/enter", {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({wallet_address: localStorage.getItem("myAlgoAddress")})
+        });
+
+        if (response.ok) {
+            setEntered(true);
+            return true;
+        }
+        else {
+            setEntered(false);
+            return false;
+        }
+
+    }
+
     return (
         <div className="nftBackground text-white">
         <div className="container small-width">
             <div className="row align-items-center py-6 px-3 h-full-screen">
                 <div className="col-12 text-center">
                     <img src={Gif} width="350" alt="" className="img-fluid d-block mx-auto rounded-circle mb-5 border border-dark border-3"/>
-                    <button class="btn btn-outline-light btn-lg rounded-pill shadow border-2">Enter Shuffle</button>
+                    {!entered || !address
+                        ? <button onClick={() => {enterShuffle()}} className="btn btn-outline-light btn-lg rounded-pill shadow border-2">Enter Shuffle</button>
+                        : <h1>You have entered the shuffle!</h1>
+                    }
+                    
                 </div>
             </div>
         </div>
@@ -20,4 +97,13 @@ const HeroSection = () => {
     )
 }
 
-export default HeroSection
+const mapStateToProps = (state) => ({
+    address: state.connect?.address,
+    myAlgoWallet: myAlgoWallet
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    connectWallet: (address) => dispatch(connectWallet(address))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeroSection);

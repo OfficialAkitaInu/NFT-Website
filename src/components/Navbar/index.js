@@ -1,9 +1,34 @@
 import React from 'react'
-import Logo from '../../images/nft/IMG_0505.jpg'
+import { connect } from 'react-redux';
 
+import Logo from '../../images/nft/IMG_0505.jpg'
 import './index.scss'
 
-function Navbar() {   
+import MyAlgoConnect from '@randlabs/myalgo-connect';
+
+import { connectWallet, disconnectWallet } from "../../services/actions/actions";
+import {myAlgoWallet} from '../../services/reducers/connect/connect'
+
+const Navbar = ({address, connectWallet, disconnectWallet, myAlgoWallet}) => {
+    function shortenAddress(address) {
+        return address.substring(0,5) + '...' + address.substring(address.length - 5);
+    }
+
+    async function connectToMyAlgo() {
+        try {
+            myAlgoWallet = myAlgoWallet = new MyAlgoConnect();
+
+            const accounts = await myAlgoWallet.connect();
+            const addresses = accounts.map(account => account.address);
+
+            connectWallet(addresses[0]);
+            localStorage.setItem("myAlgoAddress", addresses[0])
+          
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
     return (
         <>
             <nav className="navbar navbar-expand-xl navbar-dark bg-dark-grey">
@@ -26,7 +51,10 @@ function Navbar() {
                                 <a className="nav-link" href="/faq">FAQ</a>
                             </li>
                             <li className="nav-item my-2">
-                                <a className="connect-button btn-sm ms-0 ms-md-4 px-3" aria-current="page" href="#awards">Connect Wallet</a>
+                                {!address 
+                                    ? <div className="connect-button btn-sm ms-0 ms-md-4 px-3 rounded-pill" aria-current="page" onClick={() => {connectToMyAlgo()}}>Connect Wallet</div>
+                                    : <div className="connect-button btn-sm ms-0 ms-md-4 px-3 rounded-pill" aria-current="page" onClick={() => {disconnectWallet()}}>{shortenAddress(address)}</div>
+                                }
                             </li>
                         </ul>
                     </div>
@@ -36,7 +64,14 @@ function Navbar() {
     )
 }
 
+const mapStateToProps = (state) => ({
+    address: state.connect?.address,
+    myAlgoWallet: myAlgoWallet
+});
 
+const mapDispatchToProps = (dispatch) => ({
+    connectWallet: (address) => dispatch(connectWallet(address)),
+    disconnectWallet: () => dispatch(disconnectWallet()),
+});
 
-
-export default Navbar;
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

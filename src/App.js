@@ -16,19 +16,19 @@ function App() {
 
   return (
     <>
-        <Navbar />
-        <Switch location={location}>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/collection'>
-            <NFT />
-          </Route>
-          <Route path='/faq'>
-            <h1>FAQ</h1>
-          </Route>
-        </Switch>
-        <Footer />
+      <Navbar />
+      <Switch location={location}>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/collection'>
+          <NFT />
+        </Route>
+        <Route path='/faq'>
+          <h1>FAQ</h1>
+        </Route>
+      </Switch>
+      <Footer />
     </>
   );
 }
