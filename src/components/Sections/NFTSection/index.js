@@ -129,14 +129,14 @@ const NFTSection = () => {
     
     const filteredNFT = NftData.filter(
       row =>
-        row.Head.includes(getHead) &&
-        row.Eyes.includes(getEyes) &&
-        row.Snout.includes(getSnout) &&
-        row.Body.includes(getBody) &&
-        row.Back.includes(getBack) &&
-        row.Skin.includes(getSkin) &&
-        row.Background.includes(getBackground) &&
-        row.Rarity.includes(getRarity)
+        (row.Head === getHead || getHead === "") &&
+        (row.Eyes === getEyes || getEyes === "") &&
+        (row.Snout === getSnout || getSnout === "") &&
+        (row.Body === getBody || getBody === "") &&
+        (row.Back === getBack || getBack === "") &&
+        (row.Skin === getSkin || getSkin === "") &&
+        (row.Background === getBackground || getBackground === "") &&
+        (row.Rarity === getRarity || getRarity === "")
     );
 
     return (
@@ -163,12 +163,13 @@ const NFTSection = () => {
                     <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={data.name}>
                         <div className="card border-0 big-round">
                             <a href={data.url} target="_blank" rel="noreferrer">
+                                {}
                                 <LazyLoad height={250} once>
-                                    <img src={'images/nft/'+data.img} loading="lazy" className="card-img-top" alt="" />
+                                    <img src={require('../../../images/nft/' + data.img)} loading="lazy" className="card-img-top" alt="" />
                                 </LazyLoad>
                             </a>
                             <div className="card-footer bg-dark-grey p-4 position-relative">
-                                <h2 className="h5 nft-font text-truncate">AKC{data.name}</h2>
+                                <h2 className="h5 nft-font text-truncate">Akita #{data.name}</h2>
                                 <span className={data.Rarity.toLowerCase()}><i className="fas fa-check-circle fa-xs"></i>{data.Rarity}</span>
                             </div>
                         </div>

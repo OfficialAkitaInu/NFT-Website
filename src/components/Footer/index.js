@@ -8,10 +8,10 @@ const Footer = () => {
                 <div className="container small-width text-white mt-5 pb-5">
                     <div className="px-4">
                         <div className="text-center">
-                            <a href="https://reddit.com/r/AkitaInuASA/" className="my-3 btn btn-light btn-lg rounded-pill btn-lg px-4 mx-2" target="_blank" rel="noreferrer"><i className="fab fa-reddit-alien"></i> Reddit</a>
-                            <a href="https://twitter.com/AkitaInuASA" className="my-3 btn btn-light btn-lg rounded-pill btn-lg px-4 mx-2" target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i> Twitter</a>
-                            <a href="https://discord.gg/SmMuHws8nT" className="my-3 btn btn-light btn-lg rounded-pill btn-lg px-4 mx-2" target="_blank" rel="noreferrer"><i className="fab fa-discord"></i> Discord</a>
-                            <a href="https://www.instagram.com/akitainuasa_official/" className="my-3 btn btn-light btn-lg rounded-pill btn-lg px-4 mx-2" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i> Instagram</a>
+                            <a href="https://reddit.com/r/AkitaInuASA/" className="my-3 btn btn-light btn-lg rounded-pill btn-lg px-4 mx-2"><i className="fab fa-reddit-alien"></i> Reddit</a>
+                            <a href="https://twitter.com/AkitaInuASA" className="my-3 btn btn-light btn-lg rounded-pill btn-lg px-4 mx-2"><i className="fab fa-twitter"></i> Twitter</a>
+                            <a href="https://discord.gg/SmMuHws8nT" className="my-3 btn btn-light btn-lg rounded-pill btn-lg px-4 mx-2"><i className="fab fa-discord"></i> Discord</a>
+                            <a href="https://www.instagram.com/akitainuasa_official/" className="my-3 btn btn-light btn-lg rounded-pill btn-lg px-4 mx-2"><i className="fab fa-instagram"></i> Instagram</a>
                         </div>
                     </div>
                 </div>

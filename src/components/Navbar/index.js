@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-import Logo from '../../images/nft/IMG_0505.jpg'
+import Logo from '../../images/IMG_0505.jpg'
 import './index.scss'
 
 import MyAlgoConnect from '@randlabs/myalgo-connect';
 
 import { connectWallet, disconnectWallet } from "../../services/actions/actions";
-import {myAlgoWallet} from '../../services/reducers/connect/connect'
+import { myAlgoWallet } from '../../services/reducers/connect/connect'
 
 const Navbar = ({address, connectWallet, disconnectWallet, myAlgoWallet}) => {
     function shortenAddress(address) {
