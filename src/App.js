@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 
 import Home from './pages/home';
 import NFT from './pages/nft';
+import FAQ from './pages/faq';
 
 function App() {
   const location = useLocation();
@@ -25,7 +26,7 @@ function App() {
           <NFT />
         </Route>
         <Route path='/faq'>
-          <h1>FAQ</h1>
+          <FAQ />
         </Route>
       </Switch>
       <Footer />

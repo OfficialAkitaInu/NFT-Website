@@ -64,3 +64,11 @@ h1,h2,h3,h4,h5,h6,.navbar-brand,
 i {
     font-style: normal;
 }
+.container{
+    &.small-width{
+        max-width:1100px;
+    }
+    &.tiny-width{
+        max-width:700px;
+    }
+}

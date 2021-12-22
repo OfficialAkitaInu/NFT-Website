@@ -5,4 +5,12 @@
 .h-full-screen {
     min-height: 100vh!important;
 }
+.img-flip{
+    -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+        filter: FlipV;
+        -ms-filter: "FlipV";
+}
 

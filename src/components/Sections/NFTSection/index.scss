@@ -95,3 +95,28 @@
         color: rgba(31,34,37,1);
     }
 }
+.big-round{
+    border-radius: calc(1rem - 1px);
+    &.left{
+        border-radius: calc(1rem - 1px) 0 0 calc(1rem - 1px);
+    }
+}
+.opacity-half{
+    border-color:rgba(255,255,255,0.1);
+    &:hover{
+        border-color:rgba(255,255,255,1);
+    }
+}
+.btn-close{
+    filter:invert(100);
+}
+.modal-header{
+    border-bottom:solid 1px lighten(rgb(46,49,54),5%);
+}
+.bg-discord{
+    background: rgb(46,49,54);
+    color: #fff;
+}
+.hand{
+    cursor: pointer;
+}
