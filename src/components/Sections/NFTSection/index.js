@@ -4,9 +4,10 @@ import NftFilterData from '../../../details.json';
 import NftData from '../../../data.json';
 import LazyLoad, { forceVisible } from "react-lazyload";
 
-import loadingImg from '../../../images/loading.png';
+import loadingImg from '../../../images/loading.webp';
 
 import './index.scss';
+import NFTModal from '../../NFTModal';
 
 const NFTSection = () => {
 
@@ -48,7 +49,7 @@ const NFTSection = () => {
         document.getElementById("Back").selectedIndex = 0;
         document.getElementById("Skin").selectedIndex = 0;
         document.getElementById("Background").selectedIndex = 0;
-        document.getElementById("Rarity").selectedIndex = 0;
+        //document.getElementById("Rarity").selectedIndex = 0;
     }   
     
     const handleSelect = (event) => {
@@ -78,7 +79,16 @@ const NFTSection = () => {
         if(event.target.id==='Rarity'){
             setRarity(event.target.value);
         }
-        if(event.target.id==='Head' ||event.target.id==='Eyes'|| event.target.id==='Snout' || event.target.id==='Body' || event.target.id==='Back' ||event.target.id==='Skin'||event.target.id==='Background'|| event.target.id==='Rarity'){
+        if(
+          event.target.id==='Head' ||
+          event.target.id==='Eyes'||
+          event.target.id==='Snout' ||
+          event.target.id==='Body' || 
+          event.target.id==='Back' ||
+          event.target.id==='Skin'||
+          event.target.id==='Background'||
+          event.target.id==='Rarity'
+        ) {
             forceVisible();
         }
     };
@@ -128,7 +138,7 @@ const NFTSection = () => {
         }
         
         if (headIndex || eyeIndex || snoutIndex || bodyIndex || backIndex || skinIndex || backgroundIndex || rarityIndex) {
-        forceVisible();
+            forceVisible();
         }
     }
     
@@ -170,10 +180,9 @@ const NFTSection = () => {
                 <div className="row g-4" id="results">
                     {filteredNFT.map(data => (
                     <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={data.name}>
-                        <div className="card border-0 big-round hand" data-bs-toggle="modal" data-bs-target="#nftModal" onClick={() => setModalTitle(data.name) + setModalData(data) + setModalImg(require('../../../images/nft/' + data.img))}>
-                            {}
-                            <LazyLoad height={400} placeholder={<img src={loadingImg}  class="img-fluid" alt="..." />} once>
-                                <img src={require('../../../images/nft/' + data.img)} loading="lazy" className="card-img-top" alt="" />
+                        <div className="card border-0 big-round hand" data-bs-toggle="modal" data-bs-target="#nftModal" onClick={() => setModalTitle(data.name) + setModalData(data) + setModalImg(require('../../../images/compressed-nft/' + data.img))}>
+                            <LazyLoad height={400} placeholder={<img src={loadingImg}  className="img-fluid" alt="..." />} once>
+                                <img src={require('../../../images/compressed-nft/' + data.img)} loading="lazy" className="card-img-top" alt="" />
                             </LazyLoad>
                             <div className="card-footer bg-dark-grey p-4 position-relative">
                                 <h2 className="h5 nft-font text-truncate">Akita #{data.name}</h2>
@@ -182,65 +191,10 @@ const NFTSection = () => {
                         </div>
                     </div>
                     ))}
+                    {filteredNFT.length === 0 && <div class="pt-5 text-center"><h1>404 Akita Not Found</h1><p>Who let the dogs out? Try another combination.</p></div>}
                 </div>
             </div>
-            <div className="modal fade" id="nftModal" tabIndex="-1" aria-labelledby="nftModal" aria-hidden="true">
-                <div className="modal-dialog modal-dialog-centered modal-lg">
-                    <div className="modal-content bg-discord big-round">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Akita #{modalTitle}</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div className="modal-body">
-                            <div className="row align-items-center">
-                                <div className="col-12 col-md-6">
-                                    <img src={modalImg} className="img-fluid big-round" alt=""/>
-                                </div>
-                                <div className="col">
-                                    <table className="table table-dark table-striped">
-                                        <tbody>
-                                        <tr>
-                                            <th className="px-4" scope="row">Name:</th>
-                                            <td width="100%">#{modalData.name}</td>
-                                        </tr>
-                                        <tr>
-                                            <th className="px-4" scope="row">Head:</th>
-                                            <td width="100%">
-                                                {modalData.Head ? NftFilterData[0].info[modalData.Head-1].name : null}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th className="px-4" scope="row">Eyes:</th>
-                                            <td>{modalData.Eyes ? NftFilterData[1].info[modalData.Eyes-1].name : null}</td>
-                                        </tr>
-                                        <tr>
-                                            <th className="px-4" scope="row">Snout:</th>
-                                            <td>{modalData.Snout ? NftFilterData[2].info[modalData.Snout-1].name : null}</td>
-                                        </tr>
-                                        <tr>
-                                            <th className="px-4" scope="row">Body:</th>
-                                            <td>{modalData.Body ? NftFilterData[3].info[modalData.Body-1].name : null}</td>
-                                        </tr>
-                                        <tr>
-                                            <th className="px-4" scope="row">Back:</th>
-                                            <td>{modalData.Back ? NftFilterData[4].info[modalData.Back-1].name : null}</td>
-                                        </tr>
-                                        <tr>
-                                            <th className="px-4" scope="row">Skin:</th>
-                                            <td>{modalData.Skin ? NftFilterData[5].info[modalData.Skin-1].name : null}</td>
-                                        </tr>
-                                        <tr>
-                                            <th className="px-4" scope="row">Background:</th>
-                                            <td>{modalData.Background ? NftFilterData[6].info[modalData.Background-1].name : null}</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <NFTModal modalTitle={modalTitle} modalImg={modalImg} modalData={modalData} />
         </div>
     )
 }

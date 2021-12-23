@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-import Logo from '../../images/IMG_0505.jpg'
+import Logo from '../../images/watermarked_logo.webp'
 import './index.scss'
 
 import MyAlgoConnect from '@randlabs/myalgo-connect';
@@ -50,12 +50,12 @@ const Navbar = ({address, connectWallet, disconnectWallet, myAlgoWallet}) => {
                             <li className="nav-item">
                                 <a className="nav-link" href="/faq">FAQ</a>
                             </li>
-                            <li className="nav-item my-2">
+                            {/*<li className="nav-item my-2">
                                 {!address 
                                     ? <div className="connect-button btn-sm ms-0 ms-md-4 px-3 rounded-pill" aria-current="page" onClick={() => {connectToMyAlgo()}}>Connect Wallet</div>
                                     : <div className="connect-button btn-sm ms-0 ms-md-4 px-3 rounded-pill" aria-current="page" onClick={() => {disconnectWallet()}}>{shortenAddress(address)}</div>
                                 }
-                            </li>
+                            </li>*/}
                         </ul>
                     </div>
                 </div>

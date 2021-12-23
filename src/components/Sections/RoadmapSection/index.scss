@@ -1,5 +1,5 @@
 .date-bg {
-    background-image: url("../../../images/nft_background.jpg") !important; 
+    background-image: url("../../../images/nft_background.webp") !important; 
     background-repeat: no-repeat;
     -webkit-background-size: 150%;
     -moz-background-size: 150%;
@@ -9,7 +9,6 @@
 }
 .inset-shadow{
     box-shadow:inset 0 40px 40px -41px rgba(0,0,0,0.5);
-    border-top:solid 1px lighten(#2e3136,4%);
     margin-top:100px;
     padding-top:100px;
 }

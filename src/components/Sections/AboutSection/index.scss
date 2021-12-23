@@ -1,7 +1,19 @@
 a {
-    color: #fff;
+    color: rgba(65,248,191, 1);
 
     &:hover {
-        color: #ddd;
+        color: rgba(65,248,191, 0.8); 
+    }
+}
+
+.mobile-order {
+    @media screen and (max-width: 767px) {
+        order: 2;
+    }
+}
+
+#collection, #club, #token {
+    @media screen and (min-width: 767px) {
+        margin-bottom: 10px !important;
     }
 }
