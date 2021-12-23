@@ -191,7 +191,7 @@ const NFTSection = () => {
                         </div>
                     </div>
                     ))}
-                    {filteredNFT.length === 0 && <div class="pt-5 text-center"><h1>404 Akita Not Found</h1><p>Who let the dogs out? Try another combination.</p></div>}
+                    {filteredNFT.length === 0 && <div className="pt-5 text-center"><h1>404 Akita Not Found</h1><p>Who let the dogs out? Try another combination.</p></div>}
                 </div>
             </div>
             <NFTModal modalTitle={modalTitle} modalImg={modalImg} modalData={modalData} />

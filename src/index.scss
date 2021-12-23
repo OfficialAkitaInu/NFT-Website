@@ -72,3 +72,27 @@ i {
         max-width:700px;
     }
 }
+
+.nftBackground {
+    background: url("./images/nft_background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.navbar-toggler.nftBackground {
+    background: url("./images/nft_background.jpg") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+@media screen and (max-width: 992px) {
+    .nftBackground {
+        background: url("./images/nft_background.svg") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}

@@ -15,7 +15,7 @@ const NFTModal = ({modalTitle, modalImg, modalData}) => {
                 </div>
                 <div className="modal-body">
                     <div className="row align-items-center">
-                        <div className="col-12 col-md-6">
+                        <div className="col-12 col-lg-6">
                             <img src={modalImg} className="img-fluid big-round" alt=""/>
                         </div>
                         <div className="col">

@@ -32,7 +32,7 @@ const HeroSection = ({address, connectWallet, myAlgoWallet}) => {
 
     useEffect(() => {
         if (localStorage.getItem("myAlgoAddress")) {
-            getEntered();
+            //getEntered();
         }
     }, [])
 

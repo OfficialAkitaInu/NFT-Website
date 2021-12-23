@@ -14,30 +14,6 @@
 .big-round .card-footer:last-child {
     border-radius: 0 0 calc(1rem - 1px) calc(1rem - 1px);
 }
-.nftBackground {
-    background: url("../../../images/nft_background.webp") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.navbar-toggler.nftBackground {
-    background: url("../../../images/nft_background.webp") no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-@media screen and (max-width: 992px) {
-    .nftBackground {
-        background: url("../../../images/nft_background.webp") no-repeat center center; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-}
-
 .fadeBlackBackground{
     background: rgba(0,0,0,0.5);
 }
