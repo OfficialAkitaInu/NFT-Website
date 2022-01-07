@@ -16,7 +16,7 @@ const RoadmapSection = () => {
                         </li>
                         <li className="timeline-item bg-dark big-round ms-3 p-4 shadow not-done">
                             <div className="timeline-arrow"></div>
-                            <h2 className="h5 mb-0">The Official Launch</h2><span className="small text-white-50">8 Jan, 2022</span>
+                            <h2 className="h5 mb-0">The Official Launch</h2><span className="small text-white-50">15 Jan, 2022</span>
                             <p className="text-small mt-2 font-weight-light">On January 16th, 2022, the initial batch of Kennel Club NFTs will be sold and sent out blinking into the sunlight for the very first time. They’ll all be purchased via Shuffles. These Shuffles will last 24 hours and be held each weekend until every single Akita has found a new home.</p>
                         </li>
                         <li className="timeline-item bg-dark big-round ms-3 p-4 shadow not-done">
