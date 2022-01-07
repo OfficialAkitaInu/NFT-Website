@@ -52,7 +52,7 @@ const FAQSection = () => {
                     </h2>
                     <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                       <div className="accordion-body">
-                        You don’t have to wait too long! The very first Shuffle will last 24 hours and be held on January 8th, 2022.
+                        You don’t have to wait too long! The very first Shuffle will last 24 hours and be held on January 15th, 2022.
                       </div>
                     </div>
                   </div>
