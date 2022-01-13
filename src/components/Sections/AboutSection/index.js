@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Img1 from '../../../images/watermarked_logo.webp';
-import Img2 from '../../../images/watermarked-compressed-nft/AKC0011.webp';
-import Img3 from '../../../images/watermarked-compressed-nft/AKC0036.webp';
+import Img1 from '../../../images/IMG_0505.webp';
+import Img2 from '../../../images/compressed-nft/AKC0011.webp';
+import Img3 from '../../../images/compressed-nft/AKC0036.webp';
 
 import './index.scss';
 
