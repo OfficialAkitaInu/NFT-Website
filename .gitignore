@@ -24,6 +24,5 @@ yarn-error.log*
 
 /src/images/nft-upcoming
 /src/images/nft
-/src/images/compressed-nft
 
 .env
