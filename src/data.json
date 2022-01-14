@@ -1428,5 +1428,44 @@
       "Body":"2",
       "Back":"1",
       "Background":"4"
+   },
+   {  
+      "name":"0118",
+      "img":"AKC0118.webp",
+      "url":"https://google.com",
+      "Rarity":"Common",
+      "Skin":"2",
+      "Head":"3",
+      "Eyes":"2",
+      "Snout":"5",
+      "Body":"17",
+      "Back":"1",
+      "Background":"7"
+   },
+   {  
+      "name":"0119",
+      "img":"AKC0119.webp",
+      "url":"https://google.com",
+      "Rarity":"Common",
+      "Skin":"1",
+      "Head":"19",
+      "Eyes":"2",
+      "Snout":"9",
+      "Body":"15",
+      "Back":"1",
+      "Background":"4"
+   },
+   {  
+      "name":"0120",
+      "img":"AKC0120.webp",
+      "url":"https://google.com",
+      "Rarity":"Common",
+      "Skin":"5",
+      "Head":"2",
+      "Eyes":"1",
+      "Snout":"5",
+      "Body":"7",
+      "Back":"5",
+      "Background":"7"
    }
 ]
