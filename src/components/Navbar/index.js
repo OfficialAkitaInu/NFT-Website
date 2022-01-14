@@ -4,29 +4,11 @@ import { connect } from 'react-redux';
 import Logo from '../../images/watermarked_logo.webp'
 import './index.scss'
 
-import MyAlgoConnect from '@randlabs/myalgo-connect';
+import { openConnectModal } from "../../services/actions/actions";
 
-import { connectWallet, disconnectWallet } from "../../services/actions/actions";
-import { myAlgoWallet } from '../../services/reducers/connect/connect'
-
-const Navbar = ({address, connectWallet, disconnectWallet, myAlgoWallet}) => {
+const Navbar = ({address, showConnectModal}) => {
     function shortenAddress(address) {
         return address.substring(0,5) + '...' + address.substring(address.length - 5);
-    }
-
-    async function connectToMyAlgo() {
-        try {
-            myAlgoWallet = myAlgoWallet = new MyAlgoConnect();
-
-            const accounts = await myAlgoWallet.connect();
-            const addresses = accounts.map(account => account.address);
-
-            connectWallet(addresses[0]);
-            localStorage.setItem("myAlgoAddress", addresses[0])
-          
-        } catch (err) {
-            console.error(err);
-        }
     }
 
     return (
@@ -50,12 +32,12 @@ const Navbar = ({address, connectWallet, disconnectWallet, myAlgoWallet}) => {
                             <li className="nav-item">
                                 <a className="nav-link" href="/faq">FAQ</a>
                             </li>
-                            {/*<li className="nav-item my-2">
+                            {<li className="nav-item my-2">
                                 {!address 
-                                    ? <div className="connect-button btn-sm ms-0 ms-md-4 px-3 rounded-pill" aria-current="page" onClick={() => {connectToMyAlgo()}}>Connect Wallet</div>
-                                    : <div className="connect-button btn-sm ms-0 ms-md-4 px-3 rounded-pill" aria-current="page" onClick={() => {disconnectWallet()}}>{shortenAddress(address)}</div>
+                                    ? <div className="connect-button btn-sm ms-0 ms-md-4 px-3 rounded-pill" aria-current="page" onClick={() => {showConnectModal()}}>Connect Wallet</div>
+                                    : <div className="connect-button btn-sm ms-0 ms-md-4 px-3 rounded-pill" aria-current="page" onClick={() => {showConnectModal()}}>{shortenAddress(address)}</div>
                                 }
-                            </li>*/}
+                            </li>}
                         </ul>
                     </div>
                 </div>
@@ -66,12 +48,10 @@ const Navbar = ({address, connectWallet, disconnectWallet, myAlgoWallet}) => {
 
 const mapStateToProps = (state) => ({
     address: state.connect?.address,
-    myAlgoWallet: myAlgoWallet
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    connectWallet: (address) => dispatch(connectWallet(address)),
-    disconnectWallet: () => dispatch(disconnectWallet()),
+    showConnectModal: () => dispatch(openConnectModal()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

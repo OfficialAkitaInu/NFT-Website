@@ -1,5 +1,7 @@
 import {CONNECT_WALLET, DISCONNECT_WALLET} from '../../constants/ActionTypes'
 
+import WalletConnect from "@walletconnect/client";
+import QRCodeModal from "algorand-walletconnect-qrcode-modal";
 import MyAlgoConnect from '@randlabs/myalgo-connect';
 
 let defaultState = null;
@@ -22,7 +24,11 @@ export function connect(state = defaultState, action) {
         address: action.address
       }
     case DISCONNECT_WALLET:
+      if (walletConnect.connected) {
+        walletConnect.killSession();
+      }
       localStorage.removeItem("myAlgoAddress");
+      localStorage.removeItem("walletconnect");
       return {
         ...state,
         address: null
@@ -32,4 +38,9 @@ export function connect(state = defaultState, action) {
   }
 }
 
-export const myAlgoWallet = new MyAlgoConnect();
+export let walletConnect = new WalletConnect({
+  bridge: "https://bridge.walletconnect.org", 
+  qrcodeModal: QRCodeModal,
+});
+
+export let myAlgoWallet = new MyAlgoConnect();

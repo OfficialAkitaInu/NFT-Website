@@ -12,6 +12,9 @@ import Home from './pages/home';
 import NFT from './pages/nft';
 import FAQ from './pages/faq';
 
+import ConnectModal from './components/ConnectModal';
+import WalletConnectModal from './components/WalletConnectModal';
+
 function App() {
   const location = useLocation();
 
@@ -30,6 +33,8 @@ function App() {
         </Route>
       </Switch>
       <Footer />
+      <ConnectModal />
+      <WalletConnectModal />
     </>
   );
 }

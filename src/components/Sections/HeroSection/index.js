@@ -4,23 +4,31 @@ import { connect } from 'react-redux';
 import Gif from '../../../images/nft.gif';
 import './index.scss';
 
-import MyAlgoConnect from '@randlabs/myalgo-connect';
+import algosdk from 'algosdk';
 
-import { connectWallet } from "../../../services/actions/actions";
-import {myAlgoWallet} from '../../../services/reducers/connect/connect'
+import { openConnectModal } from "../../../services/actions/actions";
 
-const HeroSection = ({address, connectWallet, myAlgoWallet}) => {
+import { myAlgoWallet } from '../../../services/reducers/connect/connect'
+
+const axios = require('axios').default;
+
+const HeroSection = ({address, showConnectModal, myAlgoWallet}) => {
     const [entered, setEntered] = useState(false);
+    const [winner, setWinner] = useState(null);
+    
+    function base64Encode(input) {
+        return btoa(input.reduce((str, byte) => str + String.fromCharCode(byte), ""));
+    }
 
     async function getEntered() {
-        const response = await fetch(process.env.REACT_APP_API_URL + "/entered", {
+        const response = await fetch(process.env.REACT_APP_API_ADDRESS + "/entered", {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify({wallet_address: localStorage.getItem("myAlgoAddress")})
+            body: JSON.stringify({wallet_address: address})
         });
-        if (response.ok) {
+        if (response.status === 200) {
             setEntered(true)
             return true;
         }
@@ -30,41 +38,47 @@ const HeroSection = ({address, connectWallet, myAlgoWallet}) => {
         }
     }
 
-    useEffect(() => {
-        if (localStorage.getItem("myAlgoAddress")) {
-            //getEntered();
+    async function isWinner() {
+        const response = await fetch(process.env.REACT_APP_API_ADDRESS + "/isWinner", {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({wallet_address: address})
+        });
+        if (response.status === 200) {
+            setWinner(true)
+            return true;
         }
-    }, [])
-
-    async function connectToMyAlgo() {
-        try {
-            myAlgoWallet = myAlgoWallet = new MyAlgoConnect();
-
-            const accounts = await myAlgoWallet.connect();
-            const addresses = accounts.map(account => account.address);
-
-            connectWallet(addresses[0]);
-            localStorage.setItem("myAlgoAddress", addresses[0])
-        } catch (err) {
-            console.error(err);
+        else {
+            setWinner(false);
+            return false;
         }
     }
 
+    useEffect(() => {
+        if (address) {
+            getEntered();
+            isWinner();
+        }
+    }, [address])
+
     async function enterShuffle() {
         if (!address) {
-            await connectToMyAlgo();
+            showConnectModal();
+            return;
         }
-        
-        if (getEntered()) {
+
+        if (await getEntered()) {
             return true;
         }
 
-        const response = await fetch(process.env.REACT_APP_API_URL + "/enter", {
+        const response = await fetch(process.env.REACT_APP_API_ADDRESS + "/enter", {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify({wallet_address: localStorage.getItem("myAlgoAddress")})
+            body: JSON.stringify({wallet_address: address})
         });
 
         if (response.ok) {
@@ -73,9 +87,54 @@ const HeroSection = ({address, connectWallet, myAlgoWallet}) => {
         }
         else {
             setEntered(false);
+            document.getElementById("enter-button").classList.add("apply-shake");
+
+            document.getElementById("enter-button").addEventListener("animationend", (e) => {
+                document.getElementById("enter-button").classList.remove("apply-shake");
+            });
             return false;
         }
+    }
 
+    async function claimNFT() {
+        const algodClient = new algosdk.Algodv2("",'https://api.testnet.algoexplorer.io', '');
+        const params = await algodClient.getTransactionParams().do();
+
+        const txn1 = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+            suggestedParams: {
+                ...params,
+            },
+            from: address,
+            to: address,
+            amount: 0,
+            assetIndex: 56260609, // Change to NFT ID
+        })
+
+        const txn2 = algosdk.makePaymentTxnWithSuggestedParamsFromObject({
+            suggestedParams: {
+                ...params,
+            },
+            from: address,
+            to: process.env.REACT_APP_NFT_WALLET, 
+            amount: 50000000,
+        });
+
+        const txnsToGroup = [ txn1, txn2 ];
+        const groupID = algosdk.computeGroupID(txnsToGroup)
+        for (let i = 0; i < 2; i++) txnsToGroup[i].group = groupID;
+
+        const signed_transactions = await myAlgoWallet.signTransaction(txnsToGroup.map(txn => txn.toByte()));
+
+        let transactions_to_send = [];
+
+        signed_transactions.forEach((signed_transaction) => {
+            transactions_to_send.push(base64Encode(signed_transaction.blob))
+        })
+
+        await axios.post(process.env.REACT_APP_API_ADDRESS + '/sendClaimTransaction', {
+            "wallet_address": address,
+            "transactions": transactions_to_send,
+        })
     }
 
     return (
@@ -84,11 +143,20 @@ const HeroSection = ({address, connectWallet, myAlgoWallet}) => {
             <div className="row align-items-center py-6 px-3 h-full-screen">
                 <div className="col-12 text-center">
                     <img src={Gif} width="350" alt="" className="img-fluid d-block mx-auto rounded-circle mb-5 border border-dark border-3"/>
-                    {/*!entered || !address
-                        ? <button onClick={() => {enterShuffle()}} className="btn btn-outline-light btn-lg rounded-pill shadow border-2">Enter Shuffle</button>
+                    {!entered || !address
+                        ? <button id="enter-button" onClick={() => {enterShuffle()}} className="btn btn-outline-light btn-lg rounded-pill shadow border-2">Enter Shuffle</button>
                         : <h1>You have entered the shuffle!</h1>
-                    */}
-                    
+                        // TODO: Remove enter shuffle button when shuffle is completed
+                    }
+                    {address && winner !== null && (!winner
+                        ? <h1>You didn't win, better luck next time!</h1>
+                        : (
+                            <>
+                            <h1>You're a winner!</h1>
+                            <button id="enter-button" onClick={() => {claimNFT()}} className="btn btn-outline-light btn-lg rounded-pill shadow border-2">Adopt Your Akita (50A)</button>
+                            </>
+                        ))
+                    }
                 </div>
             </div>
         </div>
@@ -103,7 +171,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    connectWallet: (address) => dispatch(connectWallet(address))
+    showConnectModal: () => dispatch(openConnectModal()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeroSection);
