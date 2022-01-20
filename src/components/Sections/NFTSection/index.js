@@ -180,7 +180,7 @@ const NFTSection = () => {
                 <div className="row g-4" id="results">
                     {filteredNFT.map(data => (
                     <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={data.name}>
-                        <div className="card border-0 big-round hand" data-bs-toggle="modal" data-bs-target="#nftModal" onClick={() => setModalTitle(data.name) + setModalData(data) + setModalImg(require('../../../images/watermarked-compressed-nft/' + data.img))}>
+                        <div className="card border-0 big-round hand" data-bs-toggle="modal" data-bs-target="#nftModal" onClick={() => setModalTitle(data.name) + setModalData(data) + setModalImg(require('../../../images/compressed-nft/' + data.img))}>
                             <LazyLoad height={400} placeholder={<img src={loadingImg}  className="img-fluid" alt="..." />} once>
                                 <img src={require('../../../images/compressed-nft/' + data.img)} loading="lazy" className="card-img-top" alt="" />
                             </LazyLoad>

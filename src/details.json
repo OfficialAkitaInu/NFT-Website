@@ -23,11 +23,12 @@
         {"id":"20","name":"Cheese Slice","rarity":"Epic"},
         {"id":"21","name":"Flower Crown","rarity":"Epic"},
         {"id":"22","name":"Pompadour","rarity":"Epic"},
-        {"id":"23","name":"Tiny Dog","rarity":"Epic"},
-        {"id":"24","name":"Third Eye","rarity":"Epic"},
-        {"id":"25","name":"Space Helmet","rarity":"Legendary"},
-        {"id":"26","name":"Medieval Helmet","rarity":"Legendary"},
-        {"id":"27","name":"Crown","rarity":"Legendary"}
+        {"id":"23","name":"Cyborg","rarity":"Epic"},
+        {"id":"24","name":"Tiny Dog","rarity":"Epic"},
+        {"id":"25","name":"Third Eye","rarity":"Epic"},
+        {"id":"26","name":"Space Helmet","rarity":"Legendary"},
+        {"id":"27","name":"Medieval Helmet","rarity":"Legendary"},
+        {"id":"28","name":"Crown","rarity":"Legendary"}
     ]
     },
     {
@@ -43,7 +44,8 @@
         {"id":"9","name":"Monocle","rarity":"Rare"},
         {"id":"10","name":"Tech Visor","rarity":"Epic"},
         {"id":"11","name":"Engineer Goggles","rarity":"Epic"},
-        {"id":"12","name":"Lazer Eyes","rarity":"Legendary"}
+        {"id":"12","name":"Lazer Eyes","rarity":"Legendary"},
+        {"id":"13","name":"Lizard Eyes","rarity":"Legendary"}
     ]
     },
     {
@@ -59,7 +61,8 @@
         {"id":"9","name":"Mustache","rarity":"Rare"},
         {"id":"10","name":"Snarl","rarity":"Epic"},
         {"id":"11","name":"Rose","rarity":"Epic"},
-        {"id":"12","name":"Dagger","rarity":"Legendary"}
+        {"id":"12","name":"Dagger","rarity":"Legendary"},
+        {"id":"13","name":"Sapling","rarity":"Legendary"}
     ]
     },
     {
@@ -87,7 +90,8 @@
         {"id":"21","name":"Yukata Pink","rarity":"Epic"},
         {"id":"22","name":"Super Hero Cape","rarity":"Legendary"},
         {"id":"23","name":"Space Suit","rarity":"Legendary"},
-        {"id":"24","name":"Fantasy Armor","rarity":"Legendary"}
+        {"id":"24","name":"Fantasy Armor","rarity":"Legendary"},
+        {"id":"25","name":"Park Ranger","rarity":"Legendary"}
     ]
     },
     {
@@ -111,7 +115,8 @@
         {"id":"6","name":"Acid","rarity":"5%"},
         {"id":"7","name":"Rainbow","rarity":"2.5%"},
         {"id":"8","name":"Gold","rarity":"1%"},
-        {"id":"9","name":"Diamond","rarity":""}
+        {"id":"9","name":"Lizard","rarity":""},
+        {"id":"10","name":"Diamond","rarity":""}
     ]
     },
     {

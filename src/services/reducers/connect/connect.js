@@ -7,9 +7,9 @@ import MyAlgoConnect from '@randlabs/myalgo-connect';
 let defaultState = null;
 
 if (localStorage.walletconnect) {
-    defaultState = {
-      address: JSON.parse(localStorage.walletconnect).accounts[0]
-    }
+  defaultState = {
+    address: JSON.parse(localStorage.walletconnect).accounts[0]
+  }
 } else if (localStorage.getItem("myAlgoAddress") !== null){
   defaultState = {
     address: localStorage.getItem("myAlgoAddress")
