@@ -77,7 +77,7 @@ const ScheduleSection = () => {
                                 <div className="col-3 text-end text-truncate">Shuffle</div>
                             </div>
                         </div>
-                        <div className="px-4 py-3 border-bottom border-dark-lighter current">
+                        <div className="px-4 py-3 border-bottom border-dark-lighter done">
                             <div className="row align-items-center">
                                 <div className="col-3">#006</div>
                                 <div className="col-3 small">{date006.toLocaleDateString(undefined,dateOpt)}<br/>{date006.toLocaleTimeString(undefined,timeOpt)}</div>
@@ -85,7 +85,7 @@ const ScheduleSection = () => {
                                 <div className="col-3 text-end text-truncate">Reverse<br/>Auction</div>
                             </div>
                         </div>
-                        <div className="px-4 py-3 border-bottom border-dark-lighter">
+                        <div className="px-4 py-3 border-bottom border-dark-lighter current">
                             <div className="row align-items-center">
                                 <div className="col-3">#007</div>
                                 <div className="col-3 small">{date007.toLocaleDateString(undefined,dateOpt)}<br/>{date007.toLocaleTimeString(undefined,timeOpt)}</div>
