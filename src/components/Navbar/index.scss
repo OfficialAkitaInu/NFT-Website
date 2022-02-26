@@ -1,0 +1,23 @@
+.nft-green{
+    color:#44f8bd;
+}
+
+.connect-button {
+    color: #fff;
+    background-color: rgba(31,34,37,1);
+    border: 2px solid #44f8bd;
+    border-radius:calc(1rem - 1px);
+    padding: 5px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #44f8bd;
+        color: rgba(31,34,37,1);
+    }
+}

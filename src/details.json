@@ -1,0 +1,143 @@
+[
+    {
+    "section":"Head","info":[
+        {"id":"1","name":"None","rarity":"Common"},
+        {"id":"2","name":"Paneled Hat","rarity":"Common"},
+        {"id":"3","name":"Sprout","rarity":"Common"},
+        {"id":"4","name":"Antena","rarity":"Common"},
+        {"id":"5","name":"Beanie","rarity":"Common"},
+        {"id":"6","name":"Fez","rarity":"Common"},
+        {"id":"7","name":"Mohawk Green","rarity":"Common"},
+        {"id":"8","name":"Mohawk Purple","rarity":"Common"},
+        {"id":"9","name":"Bandana","rarity":"Uncommon"},
+        {"id":"10","name":"Chef hat","rarity":"Uncommon"},
+        {"id":"11","name":"Bird","rarity":"Uncommon"},
+        {"id":"12","name":"Laurels","rarity":"Rare"},
+        {"id":"13","name":"Ninja Headband Blue","rarity":"Rare"},
+        {"id":"14","name":"Ninja Headband Pink","rarity":"Rare"},
+        {"id":"15","name":"Top Hat","rarity":"Rare add algo logo"},
+        {"id":"16","name":"Pirate","rarity":"Rare"},
+        {"id":"17","name":"Wizard","rarity":"Rare"},
+        {"id":"18","name":"Halo","rarity":"Rare"},
+        {"id":"19","name":"Horns","rarity":"Rare"},
+        {"id":"20","name":"Cheese Slice","rarity":"Epic"},
+        {"id":"21","name":"Flower Crown","rarity":"Epic"},
+        {"id":"22","name":"Pompadour","rarity":"Epic"},
+        {"id":"23","name":"Cyborg","rarity":"Epic"},
+        {"id":"24","name":"Tiny Dog","rarity":"Epic"},
+        {"id":"25","name":"Third Eye","rarity":"Epic"},
+        {"id":"26","name":"Space Helmet","rarity":"Legendary"},
+        {"id":"27","name":"Medieval Helmet","rarity":"Legendary"},
+        {"id":"28","name":"Crown","rarity":"Legendary"},
+        {"id":"29","name":"Bunny Ears","rarity":"Legendary"}
+    ]
+    },
+    {
+    "section":"Eyes","info":[
+        {"id":"1","name":"Base Eyes","rarity":"Common"},
+        {"id":"2","name":"Rose Colored Glasses","rarity":"Common"},
+        {"id":"3","name":"Flame Glasses","rarity":"Common"},
+        {"id":"4","name":"Pirate Patch","rarity":"Common"},
+        {"id":"5","name":"Nerd Glasses","rarity":"Common"},
+        {"id":"6","name":"3D Glasses","rarity":"Uncommon"},
+        {"id":"7","name":"Pixel Shades","rarity":"Uncommon"},
+        {"id":"8","name":"Space Visor","rarity":"Rare"},
+        {"id":"9","name":"Monocle","rarity":"Rare"},
+        {"id":"10","name":"Tech Visor","rarity":"Epic"},
+        {"id":"11","name":"Engineer Goggles","rarity":"Epic"},
+        {"id":"12","name":"Lazer Eyes","rarity":"Legendary"},
+        {"id":"13","name":"Lizard Eyes","rarity":"Legendary"}
+    ]
+    },
+    {
+    "section":"Snout","info":[
+        {"id":"1","name":"None","rarity":"Common"},
+        {"id":"2","name":"Stick","rarity":"Common"},
+        {"id":"3","name":"Pipe","rarity":"Common"},
+        {"id":"4","name":"Dog Toy","rarity":"Uncommon"},
+        {"id":"5","name":"Tongue Out Side","rarity":"Uncommon"},
+        {"id":"6","name":"Vampire","rarity":"Uncommon"},
+        {"id":"7","name":"Tongue Out Straight","rarity":"Rare"},
+        {"id":"8","name":"Clown Nose","rarity":"Rare"},
+        {"id":"9","name":"Mustache","rarity":"Rare"},
+        {"id":"10","name":"Snarl","rarity":"Epic"},
+        {"id":"11","name":"Rose","rarity":"Epic"},
+        {"id":"12","name":"Dagger","rarity":"Legendary"},
+        {"id":"13","name":"Sapling","rarity":"Legendary"},
+        {"id":"14","name":"Buck Teeth","rarity":"Legendary"}
+    ]
+    },
+    {
+    "section":"Body","info":[
+        {"id":"1","name":"None","rarity":"Common"},
+        {"id":"2","name":"Color Block Hoodie","rarity":"Common"},
+        {"id":"3","name":"Bomber Jacket","rarity":"Common"},
+        {"id":"4","name":"Puffy Vest","rarity":"Common"},
+        {"id":"5","name":"Bandana","rarity":"Common"},
+        {"id":"6","name":"Hawaiian Button Up Red","rarity":"Common"},
+        {"id":"7","name":"Hawaiian Button Up Blue","rarity":"Common"},
+        {"id":"8","name":"Striped T-Shirt Blue","rarity":"Common"},
+        {"id":"9","name":"Striped T-Shirt Red","rarity":"Common"},
+        {"id":"10","name":"Hype Shirt","rarity":"Uncommon"},
+        {"id":"11","name":"Nerd Shirt And Tie","rarity":"Uncommon"},
+        {"id":"12","name":"Bow Collar","rarity":"Uncommon"},
+        {"id":"13","name":"Tuxedo","rarity":"Rare"},
+        {"id":"14","name":"Punk Jacket With Spikes","rarity":"Rare"},
+        {"id":"15","name":"Wizard Robe","rarity":"Rare"},
+        {"id":"16","name":"90’s Windbreaker","rarity":"Rare"},
+        {"id":"17","name":"Straight Jacket","rarity":"Epic"},
+        {"id":"18","name":"Royal Cape","rarity":"Epic"},
+        {"id":"19","name":"Pirate Jacket","rarity":"Epic"},
+        {"id":"20","name":"Yukata Blue","rarity":"Epic"},
+        {"id":"21","name":"Yukata Pink","rarity":"Epic"},
+        {"id":"22","name":"Super Hero Cape","rarity":"Legendary"},
+        {"id":"23","name":"Space Suit","rarity":"Legendary"},
+        {"id":"24","name":"Fantasy Armor","rarity":"Legendary"},
+        {"id":"25","name":"Park Ranger","rarity":"Legendary"}
+    ]
+    },
+    {
+    "section":"Back","info":[
+        {"id":"1","name":"None","rarity":"Super Common"},
+        {"id":"2","name":"Backpack","rarity":"Common"},
+        {"id":"3","name":"Shovel","rarity":"Uncommon"},
+        {"id":"4","name":"Sword","rarity":"Rare"},
+        {"id":"5","name":"Stave","rarity":"Rare"},
+        {"id":"6","name":"Logo Backpack","rarity":"Epic"},
+        {"id":"7","name":"Katana","rarity":"Epic"},
+        {"id":"8","name":"Baguette","rarity":"Legendary"},
+        {"id":"9","name":"Rocket","rarity":"Legendary"}
+    ]
+    },
+    {
+    "section":"Skin","info":[
+        {"id":"1","name":"Red Fur","rarity":"29%"},
+        {"id":"2","name":"Brown Brindle Fur","rarity":"20%"},
+        {"id":"3","name":"Blue Brindle Fur","rarity":"20%"},
+        {"id":"4","name":"Polar","rarity":"15%"},
+        {"id":"5","name":"Marble","rarity":"7.5%"},
+        {"id":"6","name":"Acid","rarity":"5%"},
+        {"id":"7","name":"Rainbow","rarity":"2.5%"},
+        {"id":"8","name":"Gold","rarity":"1%"},
+        {"id":"9","name":"Lizard","rarity":""},
+        {"id":"10","name":"Bunny","rarity":""},
+        {"id":"11","name":"Diamond","rarity":""}
+    ]
+    },
+    {
+    "section":"Background","info":[
+        {"id":"1","name":"Purple","rarity":"Common"},
+        {"id":"2","name":"Blue","rarity":"Common"},
+        {"id":"3","name":"Green","rarity":"Common"},
+        {"id":"4","name":"Yellow","rarity":"Common"},
+        {"id":"5","name":"Red","rarity":"Common"},
+        {"id":"6","name":"Orange","rarity":"Common"},
+        {"id":"7","name":"Gray","rarity":"Common"},
+        {"id":"8","name":"Purple Swirl","rarity":"Rare"},
+        {"id":"9","name":"Green Swirl","rarity":"Rare"},
+        {"id":"10","name":"Marble","rarity":"Rare"},
+        {"id":"11","name":"Liquid","rarity":"Epic"},
+        {"id":"12","name":"Rainbow","rarity":"Legendary"}
+    ]
+    }
+]
