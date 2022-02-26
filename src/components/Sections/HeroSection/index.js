@@ -17,8 +17,10 @@ const HeroSection = ({address, showConnectModal, showWalletConnectModal, closeMo
 
     const [entered, setEntered] = useState(null);
     const [winner, setWinner] = useState(null);
+    const [entryCount, setEntryCount] = useState(0);
     const [NftID, setNftID] = useState(null);
     const [claimed, setClaimed] = useState(null);
+    const [loading, setLoading] = useState(false);
     
     function base64Encode(input) {
         return btoa(input.reduce((str, byte) => str + String.fromCharCode(byte), ""));
@@ -44,6 +46,27 @@ const HeroSection = ({address, showConnectModal, showWalletConnectModal, closeMo
         .catch((error) => {
             console.error(error);
             setEntered(false);
+            return false;
+        });
+
+        return response;
+    }
+
+    async function getEntryCount() {
+        const response = await fetch(process.env.REACT_APP_API_ADDRESS + "/entryCount")
+        .then(response => response.json())
+        .then((response) => {
+            if (response.count) {
+                setEntryCount(response.count)
+                return true;
+            }
+            else {
+                //setEntryCount(0);
+                return false;
+            }
+        })
+        .catch((error) => {
+            //setEntryCount(0);
             return false;
         });
 
@@ -81,6 +104,7 @@ const HeroSection = ({address, showConnectModal, showWalletConnectModal, closeMo
             getEntered();
             isWinner();
         }
+        getEntryCount();
     }, [address])
 
     async function enterShuffle() {
@@ -136,7 +160,7 @@ const HeroSection = ({address, showConnectModal, showWalletConnectModal, closeMo
             },
             from: address,
             to: process.env.REACT_APP_NFT_WALLET, 
-            amount: 50000000,
+            amount: 100000000,
         });
 
         const txnsToGroup = [ txn1, txn2 ];
@@ -186,6 +210,8 @@ const HeroSection = ({address, showConnectModal, showWalletConnectModal, closeMo
             })
         }
 
+        setLoading(true);
+
         const response = await axios.post(process.env.REACT_APP_API_ADDRESS + '/sendClaimTransaction', {
             "wallet_address": address,
             "transactions": transactions_to_send,
@@ -202,22 +228,27 @@ const HeroSection = ({address, showConnectModal, showWalletConnectModal, closeMo
                 <div className="row align-items-center py-6 px-3 h-full-screen">
                     <div className="col-12 text-center">
                         <img src={Gif} width="350" alt="" className="img-fluid d-block mx-auto rounded-circle mb-5 border border-dark border-3"/>
-                        {/*entered !== null && !entered || !address
+                        {(!entered || !address
                             ? <button id="enter-button" onClick={() => {enterShuffle()}} className="btn btn-outline-light btn-lg rounded-pill shadow border-2">Enter Shuffle</button>
-                            : <h1>You have entered the shuffle!</h1>
-                        */}
-                        {address && winner !== null && (!winner
+                            : <h1>You have entered the shuffle!</h1>)
+                        }
+                        <h2 className="mt-4">{entryCount} Shuffle {entryCount === "1" ? "Entry" : "Entries"}</h2>
+                        {/* {loading ? <h1>Loading...</h1> : ""}
+                        {!loading && address && winner !== null && (!winner
                             ? <h1>You didn't win, better luck next time!</h1>
                             : (
                                 !claimed ? (
                                 <>
                                     <h1>You're a winner!</h1>
-                                    <button id="enter-button" onClick={() => {claimNFT()}} className="btn btn-outline-light btn-lg rounded-pill shadow border-2 mt-3">Adopt Your Akita (50A)</button>
+                                    <button id="enter-button" onClick={() => {claimNFT()}} className="btn btn-outline-light btn-lg rounded-pill shadow border-2 mt-3">Adopt Your Akita (100A)</button>
                                 </>
                                 ) 
                                 : ""
                             ))
-                        }
+                        } */}
+                        {/* {
+                        <a target="_blank" rel="noreferrer" href="https://www.randgallery.com/algo-collection/?address=AKTAH6M2WAYGWBZC5OPF4EFVCU5PXVDVOZBOU2KGKLFC6SWAJR3OEODD6Y" className="btn btn-outline-light btn-lg rounded-pill shadow border-2">Reverse Auction</a>
+                        } */}
                     </div>
                 </div>
             </div>

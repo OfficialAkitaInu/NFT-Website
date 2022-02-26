@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import Home from './pages/home';
 import NFT from './pages/nft';
 import FAQ from './pages/faq';
+import Merch from './pages/merch';
 import Winner from './pages/winner';
 
 import ConnectModal from './components/ConnectModal';
@@ -35,6 +36,11 @@ function App() {
         <Route path='/faq'>
           <Navbar />
           <FAQ />
+          <Footer />
+        </Route>
+        <Route path='/merch'>
+          <Navbar />
+          <Merch />
           <Footer />
         </Route>
         <Route path='/winner/:id'>

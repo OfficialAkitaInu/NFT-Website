@@ -6,6 +6,10 @@ a {
     }
 }
 
+span {
+    color: rgba(65,248,191, 1);
+}
+
 .mobile-order {
     @media screen and (max-width: 767px) {
         order: 2;

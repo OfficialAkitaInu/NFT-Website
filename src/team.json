@@ -44,36 +44,6 @@
     "Description": "Software Engineer"
  },
  {  
-    "name":"0112",
-    "img":"AKC0112.webp",
-    "url":"https://google.com",
-    "Rarity":"Common",
-    "Skin":"1",
-    "Head":"6",
-    "Eyes":"4",
-    "Snout":"6",
-    "Body":"3",
-    "Back":"4",
-    "Background":"8",
-    "Owner": "Gnome",
-    "Description": "Hype Guy"
- },
- {  
-    "name":"0113",
-    "img":"AKC0113.webp",
-    "url":"https://google.com",
-    "Rarity":"Common",
-    "Skin":"1",
-    "Head":"3",
-    "Eyes":"7",
-    "Snout":"6",
-    "Body":"1",
-    "Back":"1",
-    "Background":"11",
-    "Owner": "Benito",
-    "Description": "Business Development"
- },
- {  
     "name":"0114",
     "img":"AKC0114.webp",
     "url":"https://google.com",

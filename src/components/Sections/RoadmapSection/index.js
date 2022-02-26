@@ -14,7 +14,7 @@ const RoadmapSection = () => {
                             <h2 className="h5 mb-0">Hello, World!</h2><span className="small text-white-50">24 Dec, 2021</span>
                             <p className="text-small mt-2 font-weight-light">The brand new website for The Kennel Club launched on December 24th, 2021. Glad you could make it! Our devs worked incredibly hard behind the scenes to build the infrastructure, fine-tune the design and make a gallery fitting for <a href="https://twitter.com/AlgooNFT">@Algoo's</a> amazing artwork. And now it’s live for everyone to enjoy! </p>
                         </li>
-                        <li className="timeline-item bg-dark big-round ms-3 p-4 shadow not-done">
+                        <li className="timeline-item bg-dark big-round ms-3 p-4 shadow">
                             <div className="timeline-arrow"></div>
                             <h2 className="h5 mb-0">The Official Launch</h2><span className="small text-white-50">15 Jan, 2022</span>
                             <p className="text-small mt-2 font-weight-light">On January 15th, 2022, the initial batch of Kennel Club NFTs will be sold and sent out blinking into the sunlight for the very first time. They’ll all be purchased via Shuffles. These Shuffles will last 24 hours and be held each weekend until every single Akita has found a new home.</p>

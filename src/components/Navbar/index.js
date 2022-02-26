@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
+import { Link } from 'react-router-dom';
+
 import Logo from '../../images/watermarked_logo.webp'
 import './index.scss'
 
@@ -15,22 +17,28 @@ const Navbar = ({address, showConnectModal}) => {
         <>
             <nav className="navbar navbar-expand-xl navbar-dark bg-dark-grey">
                 <div className="container">
-                    <a className="navbar-brand nft-font" href="/">
+                    <Link className="navbar-brand nft-font" to="/">
                         <img src={Logo} alt="" width="40" className="me-2 rounded"/> Akita <span className="nft-green">Kennel Club</span>
-                    </a>
+                    </Link>
                     <button className="navbar-toggler rounded-4 shadow-sm nftBackground" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse px-3" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto me-0 mb-2 mb-lg-0 align-items-center">
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Home</a>
+                                <Link className="nav-link" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/collection">Collection</a>
+                                <Link className="nav-link" to="/collection">Collection</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/faq">FAQ</a>
+                                <a className="nav-link" target="_blank" rel="noreferrer" href="https://www.nftexplorer.app/sellers?collection=akita-kennel-club">Listings</a>
+                            </li>
+                            {/*<li className="nav-item">
+                                <a className="nav-link" href="/merch">Merch</a>
+                            </li>*/}
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/faq">FAQ</Link>
                             </li>
                             {<li className="nav-item my-2">
                                 {!address 
