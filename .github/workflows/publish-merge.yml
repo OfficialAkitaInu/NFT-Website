@@ -9,8 +9,8 @@ jobs:
     name: Build
     runs-on: ubuntu-20.04
     strategy:
-    matrix:
-      node-version: [16.x]
+      matrix:
+        node-version: [16.x]
 
     steps:
     - name: Code checkout
